@@ -41,7 +41,7 @@ h1 {
   border-radius: 50%;
   text-align: center;
   font-size: 2em;
-  z-index: 2;                 /* fica acima do avatarDisplay */
+  z-index: 5;                 /* fica acima do avatarDisplay */
 }
 
 #avatarDisplay {
