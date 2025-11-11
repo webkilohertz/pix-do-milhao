@@ -1,5 +1,9 @@
+
 const timerEl = document.getElementById("timer");
 const resultEl = document.getElementById("result");
+const krontimerEl = document.getElementById("krontimer");
+const kronresultadoEl = document.getElementById("kronresult");
+const avatarDisplay = document.getElementById("kronavatarDisplay");
 
 function getNextResetTime() {
   const now = new Date();
