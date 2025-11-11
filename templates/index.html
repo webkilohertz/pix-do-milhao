@@ -1,24 +1,20 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <title>Pix do Milhão</title>
-  <link rel="stylesheet" href="/static/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pix do Milhão — Sorteio Diário</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-  <h1>💸 Pix do Milhão — Sorteio Semanal</h1>
-  <div id="counter"></div>
-  <button id="btnSortear">Sortear Semana</button>
-  <p id="resultado"></p>
 
-  <script src="/static/counter.js"></script>
-  <script>
-    document.getElementById('btnSortear').onclick = async () => {
-      const res = await fetch('/api/sorteio-semanal');
-      const data = await res.json();
-      document.getElementById('resultado').textContent =
-        "Número sorteado: " + data.numero_sorteado;
-    };
-  </script>
+  <input type="text" id="avatarInput" maxlength="2" placeholder="🙂">
+  <div id="avatarDisplay"></div>
+
+  <h1>💸 Pix do Milhão — Sorteio Diário</h1>
+  <div id="timer"></div>
+  <div id="resultado"></div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
