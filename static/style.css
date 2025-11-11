@@ -25,18 +25,23 @@ h1 {
   margin-bottom: 20px;
 }
 
+
+
+
+
 #avatarInput {
   position: fixed;
   top: 10px;
   left: 10px;
   width: 80px;
   height: 80px;
-  background: transparent;
-  color: gold;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;               /* texto branco visível */
   border: 1px solid gold;
   border-radius: 50%;
   text-align: center;
   font-size: 2em;
+  z-index: 2;                 /* fica acima do avatarDisplay */
 }
 
 #avatarDisplay {
@@ -50,6 +55,7 @@ h1 {
   align-items: center;
   justify-content: center;
   font-size: 2em;
-  background: rgba(255,255,255,0.05);
+  background: rgba(255, 255, 255, 0.05);
   border: 1px solid gold;
+  z-index: 1;                 /* fica abaixo da caixa de texto */
 }
